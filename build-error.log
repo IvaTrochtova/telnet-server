@@ -1,0 +1,127 @@
+Path for java installation '/usr/lib/jvm/openjdk-25' (Common Linux Locations) does not contain a java executable
+Path for java installation '/usr/lib/jvm/openjdk-17' (Common Linux Locations) does not contain a java executable
+> Task :app:clean
+
+> Task :app:compileJava FAILED
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:1: error: class, interface, enum, or record expected
+    public void start(){
+           ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:5: error: class, interface, enum, or record expected
+        try (ServerSocket serverSocket = new ServerSocket(this.port)) {
+        ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:7: error: class, interface, enum, or record expected
+            System.out.println("Server běží na portu: " + serverSocket.getLocalPort());
+            ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:9: error: class, interface, enum, or record expected
+            while (!this.service.isShutdown()) {
+            ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:11: error: class, interface, enum, or record expected
+                if (this.activeSockets.size() >= this.maxThreads) {
+                ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:13: error: class, interface, enum, or record expected
+                    continue;
+                    ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:14: error: class, interface, enum, or record expected
+                }
+                ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:16: error: class, interface, enum, or record expected
+                System.out.println("Připojil se nový klSient: " + socket.getInetAddress());
+                ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:17: error: class, interface, enum, or record expected
+                ClientHandler handler = new ClientHandler(socket,this.activeSockets);
+                ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:18: error: class, interface, enum, or record expected
+                try {
+                ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:20: error: class, interface, enum, or record expected
+                } catch (RejectedExecutionException ex) {
+                ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:22: error: class, interface, enum, or record expected
+                    socket.close();
+                    ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:23: error: class, interface, enum, or record expected
+                    this.activeSockets.remove(socket);
+                    ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:24: error: class, interface, enum, or record expected
+                }
+                ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:31: error: class, interface, enum, or record expected
+            }else{
+            ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:33: error: class, interface, enum, or record expected
+            }
+            ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:36: error: class, interface, enum, or record expected
+        }
+        ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:39: error: class, interface, enum, or record expected
+    public synchronized void close(){
+                        ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:43: error: class, interface, enum, or record expected
+        } catch (IOException e) {
+        ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:45: error: class, interface, enum, or record expected
+        }
+        ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:50: error: class, interface, enum, or record expected
+            } catch (Exception e) {
+            ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:52: error: class, interface, enum, or record expected
+            }
+            ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:56: error: class, interface, enum, or record expected
+        try {
+        ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:59: error: class, interface, enum, or record expected
+                if(!this.service.awaitTermination(60,TimeUnit.SECONDS)){
+                ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:61: error: class, interface, enum, or record expected
+                }
+                ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:65: error: class, interface, enum, or record expected
+            Thread.currentThread().interrupt();
+            ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:66: error: class, interface, enum, or record expected
+        }
+        ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:72: error: class, interface, enum, or record expected
+            while(scanner.hasNextLine()){
+            ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:74: error: class, interface, enum, or record expected
+                if(line.equalsIgnoreCase("quit")){
+                ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:76: error: class, interface, enum, or record expected
+                    close();
+                    ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:77: error: class, interface, enum, or record expected
+                    break;
+                    ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:78: error: class, interface, enum, or record expected
+                }
+                ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:81: error: class, interface, enum, or record expected
+        });
+        ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:82: error: class, interface, enum, or record expected
+        terminalThread.setDaemon(true);
+        ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:83: error: class, interface, enum, or record expected
+        terminalThread.start();
+        ^
+/home/iva/Desktop/vs_projects/telnet-server/app/src/main/java/utb/fai/Server.java:84: error: class, interface, enum, or record expected
+    }
+    ^
+36 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 1s
+2 actionable tasks: 2 executed

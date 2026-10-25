@@ -1,0 +1,109 @@
+[18:38:36][PluginLoader][WARNING] Plugins directory not found.
+[18:38:37][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/telnet-server-config/-/raw/main/test-config-3.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[18:38:37][NATTCore][INFO] Working directory path: /home/iva/Desktop/vs_projects/telnet-server
+[18:38:37][NATTCore][INFO] Start loading of the configuration file ...
+[18:38:37][NetworkIO][INFO] Yaml data has been loaded from network location (https://gitlab.com/ap5vs/test-config/telnet-server-config/-/raw/main/test-config-3.yaml?ref_type=heads)
+[18:38:37][NATTCore][INFO] Configuration loading done
+[18:38:37][NATTCore][INFO] Start building test structure according to the configuration ...
+[18:38:37][NATTCore][INFO] Test structure ...
+[18:38:37][NATTCore][INFO] Test structure building done
+[18:38:37][NATTCore][INFO] Start test executing ...
+[18:38:38][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[18:38:38][NATTCore][INFO] Starts execution on the root keyword  ...
+[18:38:38][MessageBuffer][INFO] Message buffer created for module with name: default
+[18:38:38][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app.jar 9999 5
+[18:38:38][ProcessManager][INFO] New PID (132687) added to file
+[18:38:38][ProcessManager][INFO] PID (132687) removed from file
+[18:38:38][WaitKw][INFO] Waiting: 800 ms
+[18:38:38][ExternalProgramRunner][WARNING] (default) External application ends with error: 1
+[18:38:38][ExternalProgramRunner][WARNING] (default) Error message from external application: Error: Unable to access jarfile app/build/libs/app.jar
+
+[18:38:39][MessageBuffer][INFO] Message buffer created for module with name: client-1
+[18:38:39][TelnetClient][WARNING] (client-1) Failed to establish a connection with the host 'localhost' on port '9999'
+[18:38:39][WaitKw][INFO] Waiting: 600 ms
+[18:38:39][TestSuiteKw][INFO] Test case 'Test komunikace jednoho klienta 1' starts executing now
+[18:38:39][WaitKw][INFO] Waiting: 900 ms
+[18:38:40][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[18:38:40][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must equals expected text 'This is a test message')
+[18:38:40][TestSuiteKw][ERROR] Test suite 'Testování serveru s jedním klientem' - Test case 'Test komunikace jednoho klienta 1' failed
+[18:38:40][MessageBuffer][INFO] Message buffer cleared
+[18:38:41][TestSuiteKw][INFO] Test case 'Test komunikace jednoho klienta 2' starts executing now
+[18:38:41][WaitKw][INFO] Waiting: 600 ms
+[18:38:41][WaitKw][INFO] Waiting: 900 ms
+[18:38:42][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[18:38:42][NATTContext][INFO] Data has been stored in to the variable 'var-2'. Data value: 
+[18:38:42][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must equals expected text 'Testing message 123')
+[18:38:42][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must equals expected text 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+[18:38:42][TestSuiteKw][ERROR] Test suite 'Testování serveru s jedním klientem' - Test case 'Test komunikace jednoho klienta 2' failed
+[18:38:42][MessageBuffer][INFO] Message buffer cleared
+[18:38:43][MessageBuffer][INFO] Message buffer cleared
+[18:38:43][TelnetClient][INFO] (client-1) Telnet client [client-1] terminated
+[18:38:43][TelnetClient][WARNING] (client-1) Failed to establish a connection with the host 'localhost' on port '9999'
+[18:38:43][MessageBuffer][INFO] Message buffer created for module with name: client-2
+[18:38:43][TelnetClient][WARNING] (client-2) Failed to establish a connection with the host 'localhost' on port '9999'
+[18:38:43][MessageBuffer][INFO] Message buffer created for module with name: client-3
+[18:38:43][TelnetClient][WARNING] (client-3) Failed to establish a connection with the host 'localhost' on port '9999'
+[18:38:43][WaitKw][INFO] Waiting: 800 ms
+[18:38:44][TestSuiteKw][INFO] Test case 'Test komunikace více klientů 1' starts executing now
+[18:38:44][WaitKw][INFO] Waiting: 900 ms
+[18:38:45][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[18:38:45][NATTContext][INFO] Data has been stored in to the variable 'var-2'. Data value: 
+[18:38:45][NATTContext][INFO] Data has been stored in to the variable 'var-3'. Data value: 
+[18:38:45][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must equals expected text 'This is testing message 987654321')
+[18:38:45][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must equals expected text 'This is testing message from client #2')
+[18:38:45][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must equals expected text 'Next testing message from client 3!!')
+[18:38:45][TestSuiteKw][ERROR] Test suite 'Testování serveru s více klienty' - Test case 'Test komunikace více klientů 1' failed
+[18:38:45][MessageBuffer][INFO] Message buffer cleared
+[18:38:45][TestSuiteKw][INFO] Test case 'Test komunikace více klientů 2' starts executing now
+[18:38:45][WaitKw][INFO] Waiting: 1400 ms
+[18:38:47][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 0
+[18:38:47][NATTContext][INFO] Data has been stored in to the variable 'var-2'. Data value: 0
+[18:38:47][NATTContext][INFO] Data has been stored in to the variable 'var-3'. Data value: 0
+[18:38:47][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Expected value '3.000000' must be same as the value of the variable '0')
+[18:38:47][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Expected value '4.000000' must be same as the value of the variable '0')
+[18:38:47][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Expected value '2.000000' must be same as the value of the variable '0')
+[18:38:47][TestSuiteKw][ERROR] Test suite 'Testování serveru s více klienty' - Test case 'Test komunikace více klientů 2' failed
+[18:38:47][MessageBuffer][INFO] Message buffer cleared
+[18:38:48][MessageBuffer][INFO] Message buffer cleared
+[18:38:48][TelnetClient][INFO] (client-1) Telnet client [client-1] terminated
+[18:38:48][TelnetClient][INFO] (client-2) Telnet client [client-2] terminated
+[18:38:48][TelnetClient][INFO] (client-3) Telnet client [client-3] terminated
+[18:38:48][TelnetClient][WARNING] (client-1) Failed to establish a connection with the host 'localhost' on port '9999'
+[18:38:48][WaitKw][INFO] Waiting: 500 ms
+[18:38:48][TelnetClient][WARNING] (client-2) Failed to establish a connection with the host 'localhost' on port '9999'
+[18:38:48][WaitKw][INFO] Waiting: 500 ms
+[18:38:49][TelnetClient][WARNING] (client-3) Failed to establish a connection with the host 'localhost' on port '9999'
+[18:38:49][WaitKw][INFO] Waiting: 500 ms
+[18:38:49][MessageBuffer][INFO] Message buffer created for module with name: client-4
+[18:38:49][TelnetClient][WARNING] (client-4) Failed to establish a connection with the host 'localhost' on port '9999'
+[18:38:49][WaitKw][INFO] Waiting: 500 ms
+[18:38:50][MessageBuffer][INFO] Message buffer created for module with name: client-5
+[18:38:50][TelnetClient][WARNING] (client-5) Failed to establish a connection with the host 'localhost' on port '9999'
+[18:38:50][WaitKw][INFO] Waiting: 500 ms
+[18:38:50][MessageBuffer][INFO] Message buffer created for module with name: client-6
+[18:38:50][TelnetClient][WARNING] (client-6) Failed to establish a connection with the host 'localhost' on port '9999'
+[18:38:50][WaitKw][INFO] Waiting: 500 ms
+[18:38:51][TestSuiteKw][INFO] Test case 'Testování omezení počtu klientů 1' starts executing now
+[18:38:51][WaitKw][INFO] Waiting: 1200 ms
+[18:38:52][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 0
+[18:38:52][NATTContext][INFO] Data has been stored in to the variable 'var-2'. Data value: 0
+[18:38:52][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Expected value '2.000000' must be same as the value of the variable '0')
+[18:38:52][TestSuiteKw][ERROR] Test suite 'Testování omezení počtu připojení k serveru' - Test case 'Testování omezení počtu klientů 1' failed
+[18:38:52][MessageBuffer][INFO] Message buffer cleared
+[18:38:53][MessageBuffer][INFO] Message buffer cleared
+[18:38:53][TelnetClient][INFO] (client-1) Telnet client [client-1] terminated
+[18:38:53][TelnetClient][INFO] (client-2) Telnet client [client-2] terminated
+[18:38:53][TelnetClient][INFO] (client-3) Telnet client [client-3] terminated
+[18:38:53][TelnetClient][INFO] (client-4) Telnet client [client-4] terminated
+[18:38:53][TelnetClient][INFO] (client-5) Telnet client [client-5] terminated
+[18:38:53][TelnetClient][INFO] (client-6) Telnet client [client-6] terminated
+[18:38:53][MessageBuffer][INFO] Message buffer cleared
+[18:38:53][NATTCore][INFO] Test executing finished
+[18:38:53][NATTCore][INFO] Start generating test report
+[18:38:53][TestReportGenerator][INFO] Report saved to file
+[18:38:53][NATTCore][WARNING] Failed test cases: "Test suite 'Testování serveru s jedním klientem' initialization", "Test suite 'Testování serveru s více klienty' initialization", "Test suite 'Testování omezení počtu připojení k serveru' initialization", "Test komunikace jednoho klienta 1", "Test komunikace jednoho klienta 2", "Test komunikace více klientů 1", "Test komunikace více klientů 2", "Testování omezení počtu klientů 1"
+[18:38:53][NATTCore][INFO] Final score: 0.000000
+[18:38:53][NATTCore][ERROR] Testing done. Leaving status: FAILED
